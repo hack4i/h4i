@@ -1,5 +1,5 @@
 <h1 align="center">
-  Asmita 2022 official website
+  Hack For Inclusion
 </h1>
 
 ## 🚀 Quick start
