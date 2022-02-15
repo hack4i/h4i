@@ -141,7 +141,7 @@ body {
   width: 100vw;
   height: 100vh;
   font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-  background: #96ecff;
+  background: #ffeeee;
   color: #131313;
 }
 
@@ -351,6 +351,10 @@ html.has-scroll-dragging {
   right: 0%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .canvas {
   width: 100vw;
   height: 100vh;
@@ -362,60 +366,60 @@ html.has-scroll-dragging {
 
 .main {
   margin-top: 10vh;
+  position: relative;
+}
+
+.countdown {
   position: absolute;
-  top: 10vh;
-  left: 0;
-}
-
-.footer {
-  width: 100vw;
-  height: 50vh;
-  background-color: rgba(56, 211, 146, 0.14);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  color: #fff;
+  left: 50%;
+  bottom: -15%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  background-color: #ff3366ce;
+  padding: 10px 20px 30px 20px;
+  border-radius: 50px;
 }
 
-.footer__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 20%;
+@media screen and (max-width: 900px) {
+  .countdown {
+    bottom: 80%;
+  }
 }
 
-.footer__link {
+@media screen and (max-width: 650px) {
+  .countdown {
+    bottom: 80%;
+  }
+}
+
+.countdown__clock {
+  position: relative;
+  margin: 0 15px;
   font-size: 28px;
-  border: 2px solid #131313;
-  padding: 10px;
-  border-radius: 2px;
-  cursor: pointer;
-  text-decoration: none;
-  color: #131313;
 }
 
-.footer p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 16px;
+@media screen and (max-width: 650px) {
+  .countdown__clock {
+    font-size: 14px;
+  }
+}
+
+.countdown__clock span {
+  color: #131313;
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 650px) {
+  .countdown__clock span {
+    font-size: 8px;
+  }
 }
 
 .home {
@@ -424,6 +428,7 @@ html.has-scroll-dragging {
   display: flex;
   width: 100vw;
   height: 100vh;
+  margin-top: 10vh;
 }
 
 @media screen and (max-width: 900px) {
@@ -432,6 +437,7 @@ html.has-scroll-dragging {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    position: relative;
   }
 }
 
@@ -464,30 +470,30 @@ html.has-scroll-dragging {
 }
 
 .home__content__heading {
-  font-size: 72px;
-  font-family: "Oswald", sans-serif;
-  padding-bottom: 0.8rem;
+  width: 500px;
+}
+
+@media screen and (max-width: 900px) {
+  .home__content__heading {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .home__content__heading {
+    width: 250px;
+  }
+}
+
+.home__content__dates {
+  font-size: 28px;
   color: #ff3366;
-  border-bottom: 3px solid #131313;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-bottom: 2rem;
+  margin: 1rem 0;
+}
+
+.home__content__dates span {
+  font-size: 16px;
   text-transform: uppercase;
-  width: 100%;
-}
-
-@media screen and (max-width: 900px) {
-  .home__content__heading {
-    font-size: 54px;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .home__content__heading {
-    text-align: center;
-  }
 }
 
 .home__content p {
@@ -529,6 +535,11 @@ html.has-scroll-dragging {
   cursor: pointer;
 }
 
+.home__content__button a {
+  text-decoration: none;
+  color: white;
+}
+
 @media screen and (max-width: 900px) {
   .home__content__button {
     font-size: 16px;
@@ -553,7 +564,7 @@ html.has-scroll-dragging {
   .home__image {
     position: absolute;
     width: 100%;
-    top: 0;
+    top: -0;
     left: 0;
   }
 }
@@ -727,16 +738,19 @@ html.has-scroll-dragging {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: rgba(255, 255, 255, 0.15);
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(7.5px);
   -webkit-backdrop-filter: blur(7.5px);
-  border-radius: 10px;
   width: 350px;
   margin: 15px;
   padding: 2rem 10px;
   min-width: 220px;
+  border-right: 4px solid #ff3366;
 }
 
 @media screen and (max-width: 650px) {
@@ -771,6 +785,8 @@ html.has-scroll-dragging {
   letter-spacing: 1px;
   line-height: 1.2rem;
   width: 100%;
+  font-size: 14px;
+  text-align: center;
 }
 
 @media screen and (max-width: 900px) {
@@ -785,31 +801,57 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 40vh;
+  padding-top: 10vh;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 650px) {
   .contact {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-top: 10%;
+    height: 50vh;
+  }
+}
+
+.contact__code, .contact__copy {
+  position: absolute;
+  bottom: 10%;
+  font-size: 20px;
+  text-decoration: none;
+  color: #131313;
+  text-decoration: underline;
+  left: 10%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+@media screen and (max-width: 650px) {
+  .contact__code, .contact__copy {
+    -webkit-transform: translate(-20%, 0);
+            transform: translate(-20%, 0);
+  }
+}
+
+.contact__copy {
+  text-decoration: none;
+  left: 90%;
+  bottom: -4%;
+}
+
+@media screen and (max-width: 650px) {
+  .contact__copy {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
 }
 
 .contact__message {
   margin: 0 5%;
-  width: 40%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -820,103 +862,41 @@ html.has-scroll-dragging {
   .contact__message {
     width: 80%;
     font-size: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
 .contact__message p {
+  width: 50%;
   letter-spacing: 0.8px;
   line-height: 1.8rem;
   margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .contact__message p {
+    width: 90%;
+  }
 }
 
 .contact__message span {
+  width: 50%;
   color: #ff3366;
   font-size: 54px;
   font-weight: 500;
   text-decoration: underline;
+  text-align: center;
 }
 
 @media screen and (max-width: 900px) {
   .contact__message span {
-    margin-bottom: 5rem;
+    width: 90%;
     font-size: 36px;
   }
-}
-
-.contact__form {
-  width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-}
-
-@media screen and (max-width: 900px) {
-  .contact__form {
-    width: 80%;
-  }
-}
-
-.contact__form h1 {
-  font-size: 54px;
-  font-family: "Oswald", sans-serif;
-  padding-bottom: 0.8rem;
-  color: #ff3366;
-  border-bottom: 3px solid #131313;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-bottom: 2rem;
-  margin: 1rem;
-}
-
-@media screen and (max-width: 900px) {
-  .contact__form h1 {
-    font-size: 72px;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .contact__form h1 {
-    font-size: 54px;
-  }
-}
-
-.contact__form #name,
-.contact__form #email,
-.contact__form #message,
-.contact__form #submit {
-  background: transparent;
-  width: 40%;
-  padding: 0.5rem;
-  font-size: 16px;
-  outline: none;
-  border: 2px solid #ff3366;
-  margin: 1rem 0.8rem;
-}
-
-@media screen and (max-width: 900px) {
-  .contact__form #name,
-  .contact__form #email,
-  .contact__form #message,
-  .contact__form #submit {
-    width: 50%;
-    min-width: 240px;
-  }
-}
-
-.contact__form #message {
-  width: 90%;
-  height: 40%;
-}
-
-.contact__form #submit {
-  color: #fff;
-  background-color: #ff3366;
 }
 
 .team {
@@ -948,7 +928,8 @@ html.has-scroll-dragging {
 
 .sponsors {
   width: 100vw;
-  height: 350vh;
+  height: auto;
+  position: relative;
 }
 
 .sponsors h1 {
@@ -1057,7 +1038,7 @@ html.has-scroll-dragging {
 
 .themes {
   width: 100vw;
-  height: 250vh;
+  height: auto;
 }
 
 .themes h1 {

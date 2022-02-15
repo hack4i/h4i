@@ -1,7 +1,6 @@
 .themes {
   width: 100vw;
-  height: 250vh;
-
+  height: auto;
   h1 {
     @include heading();
     text-align: center;

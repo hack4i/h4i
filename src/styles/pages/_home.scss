@@ -2,9 +2,11 @@
   display: flex;
   width: 100vw;
   height: 100vh;
+  margin-top: 10vh;
 
   @include tablet {
     flex-direction: column;
+    position: relative;
   }
 
   &__content {
@@ -24,11 +26,23 @@
     }
 
     &__heading {
-      @include heading;
-      width: 100%;
+      width: 500px;
 
       @include tablet {
-        text-align: center;
+        width: 400px;
+      }
+      @include mobile {
+        width: 250px;
+      }
+    }
+
+    &__dates {
+      font-size: $normal-text;
+      color: $secondary-color;
+      margin: 1rem 0;
+      span {
+        font-size: $body-text;
+        text-transform: uppercase;
       }
     }
 
@@ -63,6 +77,10 @@
       letter-spacing: 2px;
       cursor: pointer;
 
+      a {
+        text-decoration: none;
+        color: white;
+      }
       @include tablet {
         font-size: $body-text;
       }
@@ -79,7 +97,7 @@
     @include tablet() {
       position: absolute;
       width: 100%;
-      top: 0;
+      top: -0;
       left: 0;
     }
 

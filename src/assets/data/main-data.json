@@ -2,22 +2,22 @@
   "navItems": [
     {
       "name": "home",
-      "link": "/"
+      "link": "#home"
     },
 
     {
       "name": "themes",
-      "link": "/themes"
+      "link": "#themes"
     },
 
     {
       "name": "past sponsor",
-      "link": "/sponsors"
+      "link": "#sponsors"
     },
 
     {
       "name": "contact",
-      "link": "/contact"
+      "link": "#contact"
     }
   ],
   "about": {

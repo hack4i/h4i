@@ -21,17 +21,18 @@
     &__card {
       display: flex;
       flex-direction: column;
+      align-items: center;
 
       background: rgba(255, 255, 255, 0.15);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(7.5px);
       -webkit-backdrop-filter: blur(7.5px);
-      border-radius: 10px;
 
       width: 350px;
       margin: 15px;
       padding: 2rem 10px;
       min-width: 220px;
+      border-right: 4px solid $secondary-color;
 
       @include mobile() {
         padding: 2rem 20px;
@@ -54,6 +55,8 @@
       }
       p {
         @include para();
+        font-size: $small-text;
+        text-align: center;
       }
     }
   }

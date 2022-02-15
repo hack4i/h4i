@@ -1,19 +1,58 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
+import gsap from "gsap"
+import Count from "./Count"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function Hero() {
+  const homeRef = useRef()
+
+  const q = gsap.utils.selector(homeRef)
+  const tl = useRef()
+
+  useEffect(() => {
+    tl.current = gsap
+      .timeline()
+      .from(q(".home__content"), {
+        x: "-200px",
+        duration: 1.2,
+        opacity: 0,
+      })
+      .from(q(".home__image"), {
+        x: "200px",
+        duration: 1.2,
+        opacity: 0,
+        delay: -1,
+      })
+  }, [])
+
   return (
-    <section className="home">
+    <section ref={homeRef} id="home" className="home">
       <div className="home__content">
-        <h1 className="home__content__heading">Hack For Inclusion</h1>
+        <StaticImage
+          src="./../assets/images/hero_text.png"
+          className="home__content__heading"
+          alt="hack for inclusion"
+        />
         <p>
           India's first collegiate hackathon created exclusively for women and
           non-binary individuals, with a goal of creating a diverse and
           inclusive environment to pursue innovation.
         </p>
-
-        <div className="home__content__button">Wanna Sponsor Us</div>
+        <div className="home__content__dates">
+          {" "}
+          13 <span>th</span>- 15 <span>th</span> May
+        </div>
+        <div className="home__content__button">
+          <a
+            href="https://drive.google.com/file/d/1VMzIoNCcYQsNxKARE5NsPEuE1M7AsE1p/view?usp=sharing"
+            target="_blank"
+          >
+            Wanna Sponsor Us
+          </a>
+        </div>
       </div>
       <div className="home__image">
+        <Count />
         <svg
           width={739}
           height={586}

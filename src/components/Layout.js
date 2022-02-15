@@ -1,5 +1,4 @@
-import React, { useRef } from "react"
-import Footer from "./Footer"
+import React, { useRef, useState } from "react"
 import Header from "./Header"
 import Scene from "./Scene"
 
@@ -9,20 +8,20 @@ export default function Layout({ children }) {
   const containerRef = useRef()
   return (
     <>
-      <LocomotiveScrollProvider
+      {/* <LocomotiveScrollProvider
         options={{
           smooth: true,
           direction: "vertical",
           // ... all available Locomotive Scroll instance options
         }}
         containerRef={containerRef}
-      >
-        <Header />
-        <Scene />
-        <main data-scroll-container ref={containerRef} className="main">
-          {children}
-        </main>
-      </LocomotiveScrollProvider>
+      > */}
+      <Scene />
+      <Header />
+      {/* <main data-scroll-container ref={containerRef} className="main"> */}
+      {children}
+      {/* </main> */}
+      {/* </LocomotiveScrollProvider> */}
     </>
   )
 }

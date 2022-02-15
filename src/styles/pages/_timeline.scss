@@ -1,79 +1,77 @@
 .contact {
   width: 100vw;
   display: flex;
+  height: 40vh;
+  padding-top: 10vh;
+  @include mobile {
+    height: 50vh;
+  }
 
-  @include tablet {
-    flex-direction: column;
-    margin-top: 10%;
+  &__code,
+  &__copy {
+    position: absolute;
+    bottom: 10%;
+    font-size: 20px;
+    text-decoration: none;
+    color: $tertiary-color;
+    text-decoration: underline;
+    left: 10%;
+    transform: translate(-50%, 0);
+    @include mobile {
+      transform: translate(-20%, 0);
+    }
+  }
+  &__copy {
+    text-decoration: none;
+    left: 90%;
+    bottom: -4%;
+    @include mobile {
+      transform: translate(-50%, 0);
+    }
+    // position: absolute;
+    // bottom: 10%;
+    // font-size: 20px;
+    // color: $tertiary-color;
+    // right: 0%;
+    // transform: translate(0, 1%);
   }
 
   &__message {
     margin: 0 5%;
-    width: 40%;
+
+    width: 90%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     font-size: $normal-text;
     @include tablet {
       width: 80%;
       font-size: 20px;
+      flex-direction: column;
     }
     p {
+      width: 50%;
       letter-spacing: 0.8px;
       line-height: 1.8rem;
       margin-bottom: 2rem;
+      text-align: center;
+      @include tablet {
+        width: 90%;
+      }
     }
     span {
+      width: 50%;
       color: $secondary-color;
       font-size: $heading3-text;
       font-weight: 500;
       text-decoration: underline;
+      text-align: center;
 
       @include tablet {
-        margin-bottom: 5rem;
+        width: 90%;
+        // margin-bottom: 5rem;
         font-size: $heading4-text;
       }
-    }
-  }
-  &__form {
-    width: 40%;
-
-    display: flex;
-    flex-direction: column;
-    position: relative;
-
-    @include tablet {
-      width: 80%;
-    }
-    h1 {
-      @include subHeading;
-      margin: 1rem;
-    }
-    #name,
-    #email,
-    #message,
-    #submit {
-      background: transparent;
-      width: 40%;
-      padding: 0.5rem;
-      font-size: $body-text;
-      outline: none;
-      border: 2px solid $secondary-color;
-      margin: 1rem 0.8rem;
-
-      @include tablet {
-        width: 50%;
-        min-width: 240px;
-      }
-    }
-    #message {
-      width: 90%;
-      height: 40%;
-    }
-    #submit {
-      color: #fff;
-      background-color: $secondary-color;
     }
   }
 }

@@ -1,6 +1,7 @@
 .sponsors {
   width: 100vw;
-  height: 350vh;
+  height: auto;
+  position: relative;
 
   h1 {
     @include subHeading;
