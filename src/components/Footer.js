@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react"
-import Layout from "./Layout"
 import gsap from "gsap"
-
+import { BsTwitter, BsInstagram } from "react-icons/bs"
+import { MdOutlineFacebook } from "react-icons/md"
 export default function Footer() {
   const contactRef = useRef()
 
@@ -26,10 +26,24 @@ export default function Footer() {
   return (
     <section ref={contactRef} id="contact" className="contact">
       <div className="contact__message">
-        <p>For any further queries drop a Message, or reach out to us below!</p>
+        <p>For any further queries drop a Message, or reach out to us here!</p>
 
-        <span>hey@h4i.tech</span>
-
+        <div className="contact__message__links">
+          <h1>hey@h4i.tech</h1>
+          <div className="social__links">
+            <a href="https://twitter.com/hack4inclusion">
+              <BsTwitter />
+            </a>
+            <a href="https://www.facebook.com/hack4inclusion/">
+              <MdOutlineFacebook />
+            </a>
+            <a href="https://www.instagram.com/hack4inclusion/">
+              <BsInstagram />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="contact__bottom">
         <a
           className="contact__code"
           href="https://devfolio.co/code-of-conduct"

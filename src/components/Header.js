@@ -56,7 +56,7 @@ export default function Header() {
       <div className="header__logo">
         <StaticImage
           className="header__image"
-          src="./../assets/images/SVG/h4i_logo.svg"
+          src="./../assets/images/h41_logo.svg"
           alt="hack for inclusion"
           placeholder="tracedSVG"
         />
