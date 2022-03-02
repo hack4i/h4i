@@ -3,42 +3,16 @@
   display: flex;
   height: 40vh;
   padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   @include mobile {
     height: 50vh;
   }
 
-  &__code,
-  &__copy {
-    position: absolute;
-    bottom: 10%;
-    font-size: 20px;
-    text-decoration: none;
-    color: $tertiary-color;
-    text-decoration: underline;
-    left: 10%;
-    transform: translate(-50%, 0);
-    @include mobile {
-      transform: translate(-20%, 0);
-    }
-  }
-  &__copy {
-    text-decoration: none;
-    left: 90%;
-    bottom: -4%;
-    @include mobile {
-      transform: translate(-50%, 0);
-    }
-    // position: absolute;
-    // bottom: 10%;
-    // font-size: 20px;
-    // color: $tertiary-color;
-    // right: 0%;
-    // transform: translate(0, 1%);
-  }
-
   &__message {
     margin: 0 5%;
-
     width: 90%;
     display: flex;
     align-items: center;
@@ -55,12 +29,15 @@
       line-height: 1.8rem;
       margin-bottom: 2rem;
       text-align: center;
+
       @include tablet {
         width: 90%;
       }
     }
-    span {
+    &__links {
       width: 50%;
+      display: flex;
+      flex-direction: column;
       color: $secondary-color;
       font-size: $heading3-text;
       font-weight: 500;
@@ -72,6 +49,30 @@
         // margin-bottom: 5rem;
         font-size: $heading4-text;
       }
+
+      .social__links {
+        width: 50%;
+        margin: 2rem auto 1rem auto;
+        display: flex;
+        justify-content: space-around;
+        font-size: $heading4-text;
+        a {
+          text-decoration: none;
+          color: $tertiary-color;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    margin: auto;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    a {
+      text-decoration: none;
+      color: $tertiary-color;
     }
   }
 }

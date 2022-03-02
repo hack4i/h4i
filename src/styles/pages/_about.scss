@@ -4,59 +4,86 @@
   height: max-content;
   display: flex;
   flex-direction: column;
+  @include tablet {
+    align-items: center;
+  }
 
   &__heading {
     @include subHeading();
     margin: 2rem 4rem;
+
+    @include mobile {
+      font-size: $heading4-text;
+    }
   }
 
-  &__content {
-    width: 95%;
-    margin: 0 auto;
-    height: 80%;
+  &__card {
     display: flex;
+    font-family: $secondary-font;
     justify-content: space-around;
-    flex-wrap: wrap;
+    align-items: center;
+    width: 100vw;
+    margin: 2rem 3rem;
+    @include tablet {
+      flex-direction: column;
+    }
 
-    &__card {
+    &__second {
+      @include tablet {
+        flex-direction: column-reverse;
+      }
+    }
+    &__image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem;
+
+      &__second {
+        justify-content: flex-start;
+      }
+
+      img {
+        width: 400px;
+        @include mobile {
+          width: 250px;
+        }
+      }
+    }
+    &__content {
+      flex: 1;
       display: flex;
       flex-direction: column;
-      align-items: center;
-
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(7.5px);
-      -webkit-backdrop-filter: blur(7.5px);
-
-      width: 350px;
-      margin: 15px;
-      padding: 2rem 10px;
-      min-width: 220px;
-      border-right: 4px solid $secondary-color;
-
-      @include mobile() {
-        padding: 2rem 20px;
-        &:last-child() {
-          margin-bottom: 4rem;
-        }
+      justify-content: center;
+      width: 50%;
+      @include tablet {
+        justify-content: center;
+        align-items: center;
+        margin: 2rem;
+        width: 80%;
       }
 
+      @include mobile {
+        width: 100%;
+      }
       h1 {
         font-size: $heading4-text;
-        width: fit-content;
-        text-transform: uppercase;
-        border-bottom: 2px solid $secondary-color;
         font-weight: 600;
         font-family: $primary-font;
-
-        @include mobile {
-          font-size: $normal-text;
-        }
+        margin-bottom: 2rem;
       }
       p {
-        @include para();
-        font-size: $small-text;
-        text-align: center;
+        font-size: $body-text;
+        font-weight: 400;
+        width: 60%;
+      }
+
+      &__second {
+        padding-left: 10rem;
+        @include tablet {
+          padding-left: 0;
+        }
       }
     }
   }

@@ -16,6 +16,8 @@
   &__image {
     width: 400px;
     margin: 2rem;
+    border: 1px solid #606060;
+    border-radius: 20px;
     @include mobile {
       width: 280px;
     }
