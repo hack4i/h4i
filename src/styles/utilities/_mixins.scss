@@ -34,12 +34,12 @@
   font-size: $heading2-text;
   font-family: $primary-font;
   padding-bottom: 0.8rem;
-  color: $secondary-color;
+  color: $tertiary-color;
   border-bottom: 3px solid $tertiary-color;
   width: fit-content;
-
+  font-weight: 700;
   margin-bottom: 2rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   @include tablet {
     font-size: $heading3-text;
     text-align: center;
@@ -49,8 +49,9 @@
   font-size: $heading3-text;
   font-family: $primary-font;
   padding-bottom: 0.8rem;
-  color: $secondary-color;
-  border-bottom: 3px solid $tertiary-color;
+  color: $tertiary-color;
+  font-weight: 700;
+  // border-bottom: 3px solid $tertiary-color;
   width: fit-content;
   margin-bottom: 2rem;
   @include tablet {

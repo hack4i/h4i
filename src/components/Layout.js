@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react"
 import Header from "./Header"
-import Scene from "./Scene"
 
 import { LocomotiveScrollProvider } from "react-locomotive-scroll"
 
@@ -16,7 +15,7 @@ export default function Layout({ children }) {
         }}
         containerRef={containerRef}
       > */}
-      <Scene />
+      {/* <Scene /> */}
       <Header />
       {/* <main data-scroll-container ref={containerRef} className="main"> */}
       {children}

@@ -3,21 +3,24 @@
   height: auto;
   h1 {
     @include heading();
-    text-align: center;
-    width: 60%;
+
+    width: 90%;
     margin: 4rem auto;
+    border: 0;
   }
   &__container {
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    padding: 0 2rem;
+    justify-content: space-between;
   }
   &__image {
     width: 400px;
-    margin: 2rem;
     border: 1px solid #606060;
     border-radius: 20px;
+    margin: 2rem 4rem;
     @include mobile {
       width: 280px;
     }

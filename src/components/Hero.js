@@ -47,7 +47,7 @@ export default function Hero() {
             href="https://drive.google.com/file/d/1VMzIoNCcYQsNxKARE5NsPEuE1M7AsE1p/view?usp=sharing"
             target="_blank"
           >
-            Wanna Sponsor Us
+            Sponsor Us
           </a>
         </div>
       </div>

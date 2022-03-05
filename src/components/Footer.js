@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react"
 import gsap from "gsap"
 import { BsTwitter, BsInstagram } from "react-icons/bs"
 import { MdOutlineFacebook } from "react-icons/md"
+import { FaLinkedinIn } from "react-icons/fa"
 export default function Footer() {
   const contactRef = useRef()
 
@@ -26,7 +27,7 @@ export default function Footer() {
   return (
     <section ref={contactRef} id="contact" className="contact">
       <div className="contact__message">
-        <p>For any further queries drop a Message, or reach out to us here!</p>
+        <p>Contact us at : </p>
 
         <div className="contact__message__links">
           <h1>hey@h4i.tech</h1>
@@ -39,6 +40,9 @@ export default function Footer() {
             </a>
             <a href="https://www.instagram.com/hack4inclusion/">
               <BsInstagram />
+            </a>
+            <a href="https://www.linkedin.com/company/hack4inclusion">
+              <FaLinkedinIn />
             </a>
           </div>
         </div>

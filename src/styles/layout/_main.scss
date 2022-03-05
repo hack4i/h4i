@@ -10,8 +10,9 @@ html {
   z-index: -1;
 }
 .main {
-  margin-top: 10vh;
+  margin: 10vh auto 0 auto;
   position: relative;
+  width: 90vw;
 }
 
 .countdown {

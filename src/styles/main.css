@@ -141,8 +141,7 @@ body {
   width: 100vw;
   height: 100vh;
   font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-  background: #ffeeee;
-  color: #131313;
+  color: #232323;
   font-family: "Lora", serif;
 }
 
@@ -260,6 +259,7 @@ html.has-scroll-dragging {
   position: fixed;
   top: 0;
   left: 5vw;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 650px) {
@@ -334,18 +334,20 @@ html.has-scroll-dragging {
 }
 
 .header__nav {
-  color: #131313;
+  color: #232323;
   text-transform: uppercase;
-  font-family: "Lora", serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 500;
   text-decoration: none;
   padding: 5px 10px;
-  letter-spacing: 0.09rem;
   cursor: pointer;
 }
 
 .header__nav:last-child {
-  border: 3px solid #ff3366;
+  background: #ff2768;
+  color: white;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
 }
 
 .nav__active {
@@ -366,8 +368,9 @@ html {
 }
 
 .main {
-  margin-top: 10vh;
+  margin: 10vh auto 0 auto;
   position: relative;
+  width: 90vw;
 }
 
 .countdown {
@@ -410,7 +413,7 @@ html {
 }
 
 .countdown__clock span {
-  color: #131313;
+  color: #232323;
   position: absolute;
   bottom: -20px;
   left: 0px;
@@ -457,7 +460,7 @@ html {
           justify-content: center;
   padding: 0rem 4rem;
   font-size: 16px;
-  color: #131313;
+  color: #232323;
 }
 
 @media screen and (max-width: 900px) {
@@ -488,7 +491,8 @@ html {
 
 .home__content__dates {
   font-size: 28px;
-  color: #ff3366;
+  color: #ff2768;
+  font-family: "Oswald", sans-serif;
   margin: 1rem 0;
 }
 
@@ -521,7 +525,7 @@ html {
 }
 
 .home__content__button {
-  background-color: #ff3366;
+  background-color: #ff2768;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -532,8 +536,8 @@ html {
   margin-top: 1rem;
   color: white;
   font-weight: 500;
-  letter-spacing: 2px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .home__content__button a {
@@ -702,27 +706,26 @@ html {
 }
 
 .about__heading {
-  font-size: 54px;
+  font-size: 72px;
   font-family: "Oswald", sans-serif;
   padding-bottom: 0.8rem;
-  color: #ff3366;
-  border-bottom: 3px solid #131313;
+  color: #232323;
+  border-bottom: 3px solid #232323;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-weight: 700;
   margin-bottom: 2rem;
+  text-transform: capitalize;
   margin: 2rem 4rem;
+  text-transform: capitalize;
+  border: 0;
 }
 
 @media screen and (max-width: 900px) {
   .about__heading {
-    font-size: 72px;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .about__heading {
     font-size: 54px;
+    text-align: center;
   }
 }
 
@@ -787,7 +790,7 @@ html {
 }
 
 .about__card__image img {
-  width: 400px;
+  width: 450px;
 }
 
 @media screen and (max-width: 650px) {
@@ -840,9 +843,15 @@ html {
 }
 
 .about__card__content p {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  width: 60%;
+  width: 40ch;
+}
+
+@media screen and (max-width: 650px) {
+  .about__card__content p {
+    width: 25ch;
+  }
 }
 
 .about__card__content__second {
@@ -860,9 +869,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 40vh;
-  padding-top: 10vh;
-  display: flex;
+  height: auto;
+  padding-top: 1rem;
+  font-family: "Oswald", sans-serif;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -870,6 +879,7 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #ff2768;
 }
 
 @media screen and (max-width: 650px) {
@@ -890,6 +900,10 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 28px;
 }
 
@@ -906,10 +920,9 @@ html {
 
 .contact__message p {
   width: 50%;
-  letter-spacing: 0.8px;
-  line-height: 1.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 900px) {
@@ -927,10 +940,9 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #ff3366;
+  color: #fff;
   font-size: 54px;
   font-weight: 500;
-  text-decoration: underline;
   text-align: center;
 }
 
@@ -954,7 +966,8 @@ html {
 
 .contact__message__links .social__links a {
   text-decoration: none;
-  color: #131313;
+  color: #232323;
+  margin: 5px;
 }
 
 .contact__bottom {
@@ -966,12 +979,13 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
+  font-family: "Lora", serif;
 }
 
 .contact__bottom a {
   text-decoration: none;
-  color: #131313;
+  color: #232323;
 }
 
 .team {
@@ -983,13 +997,14 @@ html {
   font-size: 72px;
   font-family: "Oswald", sans-serif;
   padding-bottom: 0.8rem;
-  color: #ff3366;
-  border-bottom: 3px solid #131313;
+  color: #232323;
+  border-bottom: 3px solid #232323;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-weight: 700;
   margin-bottom: 2rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-left: 2.5vw;
   margin-top: 2rem;
 }
@@ -1011,8 +1026,8 @@ html {
   font-size: 54px;
   font-family: "Oswald", sans-serif;
   padding-bottom: 0.8rem;
-  color: #ff3366;
-  border-bottom: 3px solid #131313;
+  color: #232323;
+  font-weight: 700;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1057,8 +1072,14 @@ html {
 }
 
 .sponsors__image {
-  width: 150px;
-  margin: 2rem;
+  width: 200px;
+  margin: 1rem 2rem;
+}
+
+@media screen and (max-width: 650px) {
+  .sponsors__image {
+    width: 150px;
+  }
 }
 
 .sponsors__main_parent {
@@ -1073,6 +1094,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 2rem;
 }
 
 .sponsors__main {
@@ -1081,7 +1103,29 @@ html {
 
 @media screen and (max-width: 650px) {
   .sponsors__main {
-    width: 250px;
+    width: 220px;
+  }
+}
+
+.sponsors__row {
+  margin-bottom: 3rem;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 650px) {
+  .sponsors__row {
+    margin-bottom: 2rem;
   }
 }
 
@@ -1094,13 +1138,14 @@ html {
   font-size: 72px;
   font-family: "Oswald", sans-serif;
   padding-bottom: 0.8rem;
-  color: #ff3366;
-  border-bottom: 3px solid #131313;
+  color: #232323;
+  border-bottom: 3px solid #232323;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-weight: 700;
   margin-bottom: 2rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin: 2rem 0 0 2.5vw;
 }
 
@@ -1120,16 +1165,17 @@ html {
   font-size: 72px;
   font-family: "Oswald", sans-serif;
   padding-bottom: 0.8rem;
-  color: #ff3366;
-  border-bottom: 3px solid #131313;
+  color: #232323;
+  border-bottom: 3px solid #232323;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-weight: 700;
   margin-bottom: 2rem;
-  text-transform: uppercase;
-  text-align: center;
-  width: 60%;
+  text-transform: capitalize;
+  width: 90%;
   margin: 4rem auto;
+  border: 0;
 }
 
 @media screen and (max-width: 900px) {
@@ -1140,6 +1186,7 @@ html {
 }
 
 .themes__container {
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1148,16 +1195,17 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding: 0 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .themes__image {
   width: 400px;
-  margin: 2rem;
   border: 1px solid #606060;
   border-radius: 20px;
+  margin: 2rem 4rem;
 }
 
 @media screen and (max-width: 650px) {
