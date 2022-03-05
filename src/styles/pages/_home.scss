@@ -39,6 +39,7 @@
     &__dates {
       font-size: $normal-text;
       color: $secondary-color;
+      font-family: $primary-font;
       margin: 1rem 0;
       span {
         font-size: $body-text;
@@ -74,8 +75,8 @@
       margin-top: 1rem;
       color: white;
       font-weight: 500;
-      letter-spacing: 2px;
       cursor: pointer;
+      border-radius: 10px;
 
       a {
         text-decoration: none;
