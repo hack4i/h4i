@@ -49,7 +49,9 @@ export default function Sponsors() {
               alt="h4i hack for inclusion"
             />
           </a>
+        </div>
 
+        <div className="sponsors__row">
           <a href="https://devfolio.co/" target="_blank">
             <StaticImage
               placeholder="tracedSVG"
@@ -58,9 +60,6 @@ export default function Sponsors() {
               alt="h4i hack for inclusion"
             />
           </a>
-        </div>
-
-        <div className="sponsors__row">
           <a href="https://polygon.technology/" target="_blank">
             <StaticImage
               placeholder="tracedSVG"
@@ -69,6 +68,8 @@ export default function Sponsors() {
               alt="h4i hack for inclusion"
             />
           </a>
+        </div>
+        <div className="sponsors__row">
           <a href="https://tezos.com" target="_blank">
             <StaticImage
               placeholder="tracedSVG"
