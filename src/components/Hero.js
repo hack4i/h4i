@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react"
 import gsap from "gsap"
 import Count from "./Count"
 import { StaticImage } from "gatsby-plugin-image"
-
+import { FaDiscord } from "react-icons/fa"
 export default function Hero() {
   const homeRef = useRef()
 
@@ -25,6 +25,17 @@ export default function Hero() {
       })
   }, [])
 
+  useEffect(() => {
+    const script = document.createElement("script")
+    script.src = "https://apply.devfolio.co/v2/sdk.js"
+    script.async = true
+    script.defer = true
+    document.body.appendChild(script)
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
+
   return (
     <section ref={homeRef} id="home" className="home">
       <div className="home__content">
@@ -42,12 +53,31 @@ export default function Hero() {
           {" "}
           13 <span>th</span>- 15 <span>th</span> May
         </div>
+        <div class="home__content__buttons">
+          <div className="home__content__button">
+            <a
+              href="https://drive.google.com/file/d/1VMzIoNCcYQsNxKARE5NsPEuE1M7AsE1p/view?usp=sharing"
+              target="_blank"
+            >
+              Sponsor Us
+            </a>
+          </div>
+          <div
+            className="apply-button"
+            data-hackathon-slug="hack4inclusion"
+            data-button-theme="light"
+            style={{ height: 44, width: 312 }}
+          />
+        </div>
         <div className="home__content__button">
-          <a
-            href="https://drive.google.com/file/d/1VMzIoNCcYQsNxKARE5NsPEuE1M7AsE1p/view?usp=sharing"
-            target="_blank"
-          >
-            Sponsor Us
+          <a href="https://discord.gg/GfXF4qsAyc" target="_blank">
+            <FaDiscord />
+            <span>Discord</span>
+          </a>
+        </div>
+        <div className="home__content__button">
+          <a href="https://forms.gle/nCTv13JRAnEGBxU1A" target="_blank">
+            <span>Call For Mentors</span>
           </a>
         </div>
       </div>
