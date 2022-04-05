@@ -46,12 +46,46 @@ export default function Sponsors() {
       </div>
       <h1>Sponsors</h1>
       <div class="sponsors__images">
-        <div class="sponsors__main_parent sponsors__row">
+        <div class=" sponsors__row">
+          <a href="https://www.figma.com/" target="_blank">
+            <StaticImage
+              placeholder="tracedSVG"
+              src="./../assets/images/sponsors/Moralis Logo_Dark.svg"
+              className="sponsors__image "
+              alt="h4i hack for inclusion"
+            />
+          </a>
+          <a href="https://www.figma.com/" target="_blank">
+            <StaticImage
+              placeholder="tracedSVG"
+              src="./../assets/images/sponsors/dydx.svg"
+              className="sponsors__image "
+              alt="h4i hack for inclusion"
+            />
+          </a>
+          <a href="https://www.figma.com/" target="_blank">
+            <StaticImage
+              placeholder="tracedSVG"
+              src="./../assets/images/sponsors/harmony-one-logo.png"
+              className="sponsors__image "
+              alt="h4i hack for inclusion"
+            />
+          </a>
+        </div>
+        <div class=" sponsors__row">
+          <a href="https://www.figma.com/" target="_blank">
+            <StaticImage
+              placeholder="tracedSVG"
+              src="./../assets/images/sponsors/ugp.png"
+              className="sponsors__image "
+              alt="h4i hack for inclusion"
+            />
+          </a>
           <a href="https://www.figma.com/" target="_blank">
             <StaticImage
               placeholder="tracedSVG"
               src="./../assets/images/sponsors/figma.png"
-              className="sponsors__image sponsors__main"
+              className="sponsors__image "
               alt="h4i hack for inclusion"
             />
           </a>
@@ -62,7 +96,7 @@ export default function Sponsors() {
             <StaticImage
               placeholder="tracedSVG"
               src="./../assets/images/sponsors/devfolio.png"
-              className="sponsors__image sponsors__main"
+              className="sponsors__image "
               alt="h4i hack for inclusion"
             />
           </a>

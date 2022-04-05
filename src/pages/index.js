@@ -26,11 +26,11 @@ export default function Home() {
             width: "10%",
             zIndex: 10000,
           }}
-          href="https://mlh.io/seasons/2022/events?utm_source=apac-hackathon&utm_medium=TrustBadge&utm_campaign=2022-season&utm_content=white"
+          href="https://mlh.io/seasons/2022/events?utm_source=apac-hackathon&utm_medium=TrustBadge&utm_campaign=2022-season&utm_content=gray"
           target="_blank"
         >
           <img
-            src="https://s3.amazonaws.com/logged-assets/trust-badge/2022/mlh-trust-badge-2022-white.svg"
+            src="https://s3.amazonaws.com/logged-assets/trust-badge/2022/mlh-trust-badge-2022-gray.svg"
             alt="Major League Hacking 2022 Hackathon Season"
             style={{ width: "100%" }}
           />
