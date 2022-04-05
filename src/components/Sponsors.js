@@ -37,6 +37,12 @@ export default function Sponsors() {
           className="sponsors__image"
           alt="h4i hack for inclusion"
         />
+        <StaticImage
+          placeholder="tracedSVG"
+          src="./../assets/images/sponsors/mlh-logo-color.svg"
+          className="sponsors__image"
+          alt="h4i hack for inclusion"
+        />
       </div>
       <h1>Sponsors</h1>
       <div class="sponsors__images">
@@ -142,6 +148,24 @@ export default function Sponsors() {
             <StaticImage
               placeholder="tracedSVG"
               src="./../assets/images/sponsors/Rstudio logo.png"
+              className="sponsors__image"
+              alt="h4i hack for inclusion"
+            />
+          </a>
+        </div>
+        <div className="sponsors__row">
+          <a href="https://www.red-gate.com/" target="_blank">
+            <StaticImage
+              placeholder="tracedSVG"
+              src="./../assets/images/sponsors/redgate logo.png"
+              className="sponsors__image"
+              alt="h4i hack for inclusion"
+            />
+          </a>
+          <a href="https://fossunited.org/" target="_blank">
+            <StaticImage
+              placeholder="tracedSVG"
+              src="./../assets/images/sponsors/foss-united.png"
               className="sponsors__image"
               alt="h4i hack for inclusion"
             />
