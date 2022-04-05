@@ -47,7 +47,7 @@ export default function Sponsors() {
       <h1>Sponsors</h1>
       <div class="sponsors__images">
         <div class=" sponsors__row">
-          <a href="https://www.figma.com/" target="_blank">
+          <a href="https://moralis.io/" target="_blank">
             <StaticImage
               placeholder="tracedSVG"
               src="./../assets/images/sponsors/Moralis Logo_Dark.svg"
@@ -55,7 +55,7 @@ export default function Sponsors() {
               alt="h4i hack for inclusion"
             />
           </a>
-          <a href="https://www.figma.com/" target="_blank">
+          <a href="https://dydx.exchange/" target="_blank">
             <StaticImage
               placeholder="tracedSVG"
               src="./../assets/images/sponsors/dydx.svg"
@@ -63,17 +63,17 @@ export default function Sponsors() {
               alt="h4i hack for inclusion"
             />
           </a>
-          <a href="https://www.figma.com/" target="_blank">
+          <a href="https://www.harmony.one/" target="_blank">
             <StaticImage
               placeholder="tracedSVG"
-              src="./../assets/images/sponsors/harmony-one-logo.png"
+              src="./../assets/images/sponsors/Harmony (ONE) 1.svg"
               className="sponsors__image "
               alt="h4i hack for inclusion"
             />
           </a>
         </div>
         <div class=" sponsors__row">
-          <a href="https://www.figma.com/" target="_blank">
+          <a href="https://www.unigrants.org/" target="_blank">
             <StaticImage
               placeholder="tracedSVG"
               src="./../assets/images/sponsors/ugp.png"
