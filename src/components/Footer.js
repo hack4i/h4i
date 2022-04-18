@@ -50,7 +50,7 @@ export default function Footer() {
       <div className="contact__bottom">
         <a
           className="contact__code"
-          href="https://devfolio.co/code-of-conduct"
+          href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
           target="_blank"
         >
           Code of Conduct
