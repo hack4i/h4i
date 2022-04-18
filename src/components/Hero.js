@@ -70,7 +70,7 @@ export default function Hero() {
           />
         </div>
         <div className="home__content__button">
-          <a href="https://discord.gg/GfXF4qsAyc" target="_blank">
+          <a href="https://discord.gg/eUXuyrg9Yy" target="_blank">
             <FaDiscord />
             <span>Discord</span>
           </a>
