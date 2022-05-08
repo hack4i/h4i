@@ -6,8 +6,11 @@ import Themes from "../components/Themes"
 import Footer from "../components/Footer"
 import Sponsors from "../components/Sponsors"
 import Seo from "./../components/Seo"
+import Schedule from "./../components/Schedule"
+import Prizes from "../components/Prizes"
 
 import "./../styles/main.css"
+import Speakers from "../components/Speakers"
 
 export default function Home() {
   return (
@@ -38,8 +41,12 @@ export default function Home() {
 
         <Hero />
         <About />
+        <Speakers />
         <Themes />
+        <Schedule />
+        <Prizes />
         <Sponsors />
+
         <Footer />
       </Layout>
     </>
