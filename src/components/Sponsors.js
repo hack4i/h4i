@@ -206,6 +206,21 @@ export default function Sponsors() {
           </a>
         </div>
       </div>
+      <h1>Community Partners</h1>
+      <div class="sponsors__images">
+        <StaticImage
+          placeholder="tracedSVG"
+          src="./../assets/images/sponsors/mentro.png"
+          className="sponsors__image"
+          alt="h4i hack for inclusion"
+        />
+        <StaticImage
+          placeholder="tracedSVG"
+          src="./../assets/images/sponsors/codess.jpg"
+          className="sponsors__image"
+          alt="h4i hack for inclusion"
+        />
+      </div>
     </section>
   )
 }
